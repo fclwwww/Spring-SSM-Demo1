@@ -10,6 +10,7 @@ public class UserServiceImpl implements UserService {
     private UserDAO userDAO;
     @Override
     public User checkLogin(String userName, String userPwd) {
+        System.out.println("pull 1");
         User user = userDAO.queryUserByName(userName);
         if(user!=null){
             if(userPwd.equals(user.getUserPwd())){
